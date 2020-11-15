@@ -1,0 +1,1 @@
+basic demo for spring framework based on xml configuration

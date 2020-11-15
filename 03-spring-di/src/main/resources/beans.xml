@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.jin.pojo.Student">
+        <property name="name" value="Jin"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>Red River</value>
+                <value>Yellow Stone</value>
+            </array>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>Sports</value>
+                <value>Movie</value>
+            </list>
+        </property>
+        <property name="cards">
+            <map>
+                <entry key="pid" value="34343531125"/>
+                <entry key="bid" value="348073065"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>Star</value>
+                <value>LOL</value>
+            </set>
+        </property>
+        <property name="nullStr">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="no">34356</prop>
+                <prop key="bod">1990-11-01</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.jin.pojo.Address">
+        <property name="address" value="xi'an"/>
+    </bean>
+
+</beans>
